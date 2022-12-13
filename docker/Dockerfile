@@ -26,6 +26,6 @@ COPY docker/jmx_exporter_config.yaml /app/conf/jmx_exporter_config.yaml
 
 RUN confluent-hub install --no-prompt jcustenborder/kafka-connect-twitter:0.3.34
 
-CMD export EXTRA_ARGS="-javaagent:/app/lib/jmx_prometheus_exporter-jar=${JAVA_AGENT_PORT}:/app/conf/jmx_exporter_config.yaml" ;\
-    /etc/confluent/docker.run
+#CMD export EXTRA_ARGS="-javaagent:/app/lib/jmx_prometheus_exporter-jar=${JAVA_AGENT_PORT}:/app/conf/jmx_exporter_config.yaml" ;\
+#    /etc/confluent/docker.run
 
